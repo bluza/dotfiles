@@ -7,4 +7,4 @@ export BROWSER=/usr/bin/google-chrome-stable
 
 #Paths
 
-PATH=$PATH:/usr/local/MATLAB/R2019a
+PATH=$PATH:/usr/local/MATLAB/R2019a/bin
