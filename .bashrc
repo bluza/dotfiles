@@ -168,3 +168,5 @@ unset __conda_setup
 
 #pkg-config Path, needed for opencv
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib64/pkgconfig/
+
+#export PATH=$PATH:/usr/local/MATLAB/R2019a/bin/
