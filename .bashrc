@@ -145,10 +145,11 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 set -o vi
 
 #my aliases
-
+alias ls="ls -l"
 alias vim="nvim"
 alias vi="nvim"
 alias gd="cd ~/drive/DSE"
+
 # added by Anaconda3 2018.12 installer
 # >>> conda init >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -169,4 +170,13 @@ unset __conda_setup
 #pkg-config Path, needed for opencv
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib64/pkgconfig/
 
-#export PATH=$PATH:/usr/local/MATLAB/R2019a/bin/
+
+#pip status powerline-shell
+#Powerline stuff
+function _update_ps1() {
+    PS1=$(powerline-shell $?)
+}
+
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi

@@ -1,4 +1,4 @@
-syntax on 
+"syntax on 
 
 "let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 "set termguicolors
@@ -26,14 +26,19 @@ Plug 'https://github.com/ncm2/ncm2-path'
 
 Plug 'michaeljsmith/vim-indent-object'
 
+Plug 'https://github.com/altercation/vim-colors-solarized'
+
 
 Plug 'tpope/vim-surround'
 
 call plug#end()
 
+let g:solarized_termcolors=16
 
-
-colorscheme nord
+syntax enable
+"set background=dark
+"colorscheme solarized
+"colorscheme nord
 " nc2m config
 "
 
